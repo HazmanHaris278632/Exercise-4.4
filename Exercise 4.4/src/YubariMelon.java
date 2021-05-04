@@ -15,7 +15,7 @@ public class YubariMelon extends Fruit {//subclass of Fruit
 		this.price = price;
 		
 		if(this.quantity <= 2) {
-			totalPrice();
+			totalPrice(); //overloading with no arguments
 			System.out.println("Buy \t\t: " + this.quantity + " quantity");
 			System.out.printf("Total price \t: RM%.2f",totalPrice());
 			
@@ -41,10 +41,10 @@ public class YubariMelon extends Fruit {//subclass of Fruit
 	public double totalPrice() {//overloading method
 		return this.price*this.quantity;
 	}
-	public double totalPrice(double pr) {//overloading method
+	public double totalPrice(double pr) {
 		return pr*this.quantity;
 	}
-	public double totalPrice(double pr,double qq) {//overloading method
+	public double totalPrice(double pr,double qq) {
 		return pr*qq;
 	}  
 	public String getColour() {
