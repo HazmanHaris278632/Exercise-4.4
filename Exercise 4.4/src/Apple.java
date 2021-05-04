@@ -6,14 +6,14 @@ public class Apple extends Fruit {
 	protected double price, weight;
 	
 	
-	public Apple(String name, String colour, double weight, double price) {//subclass
+	public Apple(String name, String colour, double weight, double price) {//subclass of Fruit
 		super(name);
 		this.colour = colour;
 		this.weight = weight;
 		this.price = price;
 	
 		if(this.weight <= 3) {
-			totalPrice();
+			totalPrice(); //overloading with no arguments
 			System.out.printf("Buy \t\t: %.2fkg",this.weight);
 			System.out.printf("\nTotal price \t: RM%.2f",totalPrice());
 			
@@ -37,11 +37,11 @@ public class Apple extends Fruit {
 		return this.price*this.weight;
 	}
 	
-	public double totalPrice(double pr) {//overloading method
+	public double totalPrice(double pr) {
 		return pr*this.weight;
 	}
 	
-	public double totalPrice(double pr,double qq) {//overloading method
+	public double totalPrice(double pr,double qq) {
 		return pr*qq;
 	}  
 	public double weight() {
@@ -52,7 +52,7 @@ public class Apple extends Fruit {
 		return this.colour;
 	}
 	
-	public String toString() { //overriding method-dif classes
+	public String toString() { 
 		return "\nFruit name      : " + super.getName() +
 			   "\n" + "Colour \t\t: " + this.getColour();
 		
