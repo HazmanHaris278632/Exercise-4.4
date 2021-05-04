@@ -52,7 +52,7 @@ public class Apple extends Fruit {
 		return this.colour;
 	}
 	
-	public String toString() { 
+	public String toString() { //overriding method
 		return "\nFruit name      : " + super.getName() +
 			   "\n" + "Colour \t\t: " + this.getColour();
 		
